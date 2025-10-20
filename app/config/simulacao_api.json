@@ -1,0 +1,39 @@
+{
+  "api": {
+    "base_url": "https://jsonplaceholder.typicode.com",
+    "endpoints": {
+      "users": "/users",
+      "posts": "/posts"
+    },
+    "timeout_seconds": 20,
+    "retries": 2
+  },
+  "schema": {
+    "users": {
+      "required_columns": ["user_id", "nome", "usuario", "email"],
+      "integer_fields": ["user_id"],
+      "string_fields": ["nome", "usuario", "email"],
+      "float_fields": []
+    },
+    "posts": {
+      "required_columns": ["post_id", "user_id", "titulo", "conteudo"],
+      "integer_fields": ["post_id", "user_id"],
+      "string_fields": ["titulo", "conteudo"],
+      "float_fields": []
+    }
+  },
+  "output": {
+    "base_dir": "data-lake/bronze",
+    "users_table": "tb_simulacao_api_users",
+    "posts_table": "tb_simulacao_api_posts",
+    "partition_key": "anomesdia",
+    "users_filename": "users.txt",
+    "posts_filename": "posts.txt",
+    "csv_delimiter": ";",
+    "encoding": "utf-8",
+    "index": false
+  },
+  "logic": {
+    "user_target": "Kurtis Weissnat"
+  }
+}

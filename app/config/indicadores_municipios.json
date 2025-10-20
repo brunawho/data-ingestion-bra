@@ -1,0 +1,60 @@
+{
+  "csv": {
+    "path": "data-lake/temp/IBC_municipios_indicadores_normalizados.csv",
+    "delimiter": ";",
+    "encoding": "utf-8",
+    "has_header": true
+  },
+  "columns_normalization": {
+    "Ano": "ano",
+    "Código Município": "codigo_municipio",
+    "Município": "municipio",
+    "UF": "uf",
+    "IBC": "ibc",
+    "Cobertura Pop. 4G5G": "cobertura_pop_4g5g",
+    "Densidade SMP": "densidade_smp",
+    "HHI SMP": "hhi_smp",
+    "Densidade SCM": "densidade_scm",
+    "HHI SCM": "hhi_scm",
+    "Adensamento Estações": "adensamento_estacoes",
+    "Fibra": "fibra",
+    "Cobertura área agricultável": "cobertura_area_agricultavel"
+  },
+  "schema": {
+    "required_columns": [
+      "ano",
+      "codigo_municipio",
+      "municipio",
+      "uf",
+      "ibc",
+      "cobertura_pop_4g5g",
+      "densidade_smp",
+      "hhi_smp",
+      "densidade_scm",
+      "hhi_scm",
+      "adensamento_estacoes",
+      "fibra",
+      "cobertura_area_agricultavel"
+    ],
+    "integer_fields": ["ano"],
+    "string_fields": ["codigo_municipio", "municipio", "uf"],
+    "float_fields": [
+      "ibc",
+      "cobertura_pop_4g5g",
+      "densidade_smp",
+      "hhi_smp",
+      "densidade_scm",
+      "hhi_scm",
+      "adensamento_estacoes",
+      "fibra",
+      "cobertura_area_agricultavel"
+    ]
+  },
+  "output": {
+    "base_dir": "data-lake/bronze",
+    "table": "tb_indicadores_municipio",
+    "partition_key": "anomesdia",
+    "filename": "indmunicipios.txt",
+    "index": false
+  }
+}

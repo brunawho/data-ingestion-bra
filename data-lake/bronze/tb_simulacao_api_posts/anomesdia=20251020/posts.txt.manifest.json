@@ -1,0 +1,45 @@
+{
+  "core": {
+    "arquivo": "posts.txt",
+    "diretorio": "data-lake/bronze\\tb_simulacao_api_posts\\anomesdia=20251020",
+    "tamanho_bytes": 2131,
+    "hash_md5": "87c286091d9234cdfd6aad202b7ef08f",
+    "gerado_em": "2025-10-20T17:45:39"
+  },
+  "dataset": {
+    "dataset": "jsonplaceholder.posts",
+    "origem": "api",
+    "endpoint": "https://jsonplaceholder.typicode.com/posts?userId=7",
+    "delimitador": ";",
+    "encoding": "utf-8",
+    "partition_key": "anomesdia",
+    "partition_value": null,
+    "run_id": null,
+    "producer": "ingestao_api.py"
+  },
+  "schema_stats": {
+    "colunas": [
+      "user_id",
+      "post_id",
+      "titulo",
+      "conteudo"
+    ],
+    "dtypes": {
+      "user_id": "Int64",
+      "post_id": "Int64",
+      "titulo": "object",
+      "conteudo": "object"
+    },
+    "linhas": 10,
+    "nulos": {
+      "user_id": 0,
+      "post_id": 0,
+      "titulo": 0,
+      "conteudo": 0
+    },
+    "preview": null
+  },
+  "extra": {
+    "user_id": 7
+  }
+}

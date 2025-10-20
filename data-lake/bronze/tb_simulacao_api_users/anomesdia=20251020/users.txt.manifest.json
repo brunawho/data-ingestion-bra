@@ -1,0 +1,42 @@
+{
+  "core": {
+    "arquivo": "users.txt",
+    "diretorio": "data-lake/bronze\\tb_simulacao_api_users\\anomesdia=20251020",
+    "tamanho_bytes": 552,
+    "hash_md5": "084db6682b0bc82086d3a9db30a12d23",
+    "gerado_em": "2025-10-20T17:45:39"
+  },
+  "dataset": {
+    "dataset": "jsonplaceholder.users",
+    "origem": "api",
+    "endpoint": "https://jsonplaceholder.typicode.com/users",
+    "delimitador": ";",
+    "encoding": "utf-8",
+    "partition_key": "anomesdia",
+    "partition_value": null,
+    "run_id": null,
+    "producer": "ingestao_api.py"
+  },
+  "schema_stats": {
+    "colunas": [
+      "user_id",
+      "nome",
+      "usuario",
+      "email"
+    ],
+    "dtypes": {
+      "user_id": "Int64",
+      "nome": "object",
+      "usuario": "object",
+      "email": "object"
+    },
+    "linhas": 10,
+    "nulos": {
+      "user_id": 0,
+      "nome": 0,
+      "usuario": 0,
+      "email": 0
+    },
+    "preview": null
+  }
+}

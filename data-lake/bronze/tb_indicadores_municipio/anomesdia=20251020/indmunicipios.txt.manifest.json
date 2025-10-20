@@ -1,0 +1,69 @@
+{
+  "core": {
+    "arquivo": "indmunicipios.txt",
+    "diretorio": "data-lake/bronze\\tb_indicadores_municipio\\anomesdia=20251020",
+    "tamanho_bytes": 1843720,
+    "hash_md5": "e56df3b7e5f004323989165186b0aa39",
+    "gerado_em": "2025-10-20T18:44:08"
+  },
+  "dataset": {
+    "dataset": "ibc_municipios.indicadores_normalizados",
+    "origem": "csv",
+    "endpoint": "data-lake/temp/IBC_municipios_indicadores_normalizados.csv",
+    "delimitador": ";",
+    "encoding": "utf-8",
+    "partition_key": "anomesdia",
+    "partition_value": null,
+    "run_id": null,
+    "producer": "ingestao_csv.py"
+  },
+  "schema_stats": {
+    "colunas": [
+      "ano",
+      "codigo_municipio",
+      "municipio",
+      "uf",
+      "ibc",
+      "cobertura_pop_4g5g",
+      "densidade_smp",
+      "hhi_smp",
+      "densidade_scm",
+      "hhi_scm",
+      "adensamento_estacoes",
+      "fibra",
+      "cobertura_area_agricultavel"
+    ],
+    "dtypes": {
+      "ano": "Int64",
+      "codigo_municipio": "object",
+      "municipio": "object",
+      "uf": "object",
+      "ibc": "float64",
+      "cobertura_pop_4g5g": "float64",
+      "densidade_smp": "float64",
+      "hhi_smp": "float64",
+      "densidade_scm": "float64",
+      "hhi_scm": "float64",
+      "adensamento_estacoes": "float64",
+      "fibra": "float64",
+      "cobertura_area_agricultavel": "float64"
+    },
+    "linhas": 22280,
+    "nulos": {
+      "ano": 0,
+      "codigo_municipio": 0,
+      "municipio": 0,
+      "uf": 0,
+      "ibc": 0,
+      "cobertura_pop_4g5g": 0,
+      "densidade_smp": 0,
+      "hhi_smp": 0,
+      "densidade_scm": 0,
+      "hhi_scm": 0,
+      "adensamento_estacoes": 0,
+      "fibra": 0,
+      "cobertura_area_agricultavel": 16723
+    },
+    "preview": null
+  }
+}
