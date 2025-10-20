@@ -98,17 +98,16 @@ Os resultados e metadados são salvos automaticamente na pasta configurada em da
 ## Uso de Inteligência Artificial
 
 Utilizei Copilot e ChatGPT para acelerar a escrita de partes genéricas do código, como:
-- Estrutura base das funções (load_config, get_session, leitura de CSV/API).
-- Moldes de DataFrame.rename, print(...to_string(index=False)) e to_csv.
-- Assinatura e esqueleto da função write_metadata_from_df.
-- Estrutura base da função write_metadata_from_df
-- Comentários do código
+	•	Estrutura base das funções (load_config, get_session, leitura de CSV/API);
+	•	Moldes de DataFrame.rename, print(...to_string(index=False)) e to_csv;
+	•	Assinatura e esqueleto da função write_metadata_from_df;
+	•	Comentários e docstrings explicativos.
 
-Criação das funções em utils:
-- Validate.py
-- Casting.py
-- Metadata.py
+Também utilizei IA para gerar o template inicial das funções em utils:
+	•	validate.py
+	•	casting.py
+	•	metadata.py
 
-Toda a lógica de negócio e governança — incluindo validações de schema, checagem de colunas extras, validação de colunas do preview, integração de metadados e estrutura de partição — foi curada e implementada manualmente, priorizando auditabilidade, previsibilidade e boas práticas de engenharia de dados.
-
+Toda a lógica de negócio e governança, incluindo validações de schema, checagem de colunas extras, validação de colunas do preview, integração de metadados e estrutura de partição — foi curada e implementada manualmente, priorizando auditabilidade, previsibilidade e boas práticas de engenharia de dados.
+ 
 Autor: Bruna Oliveira de Sousa
